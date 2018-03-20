@@ -1,0 +1,27 @@
+<lasso-page package-path="./browser.json"/>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Marko Demo</title>
+
+        <lasso-head/>
+    </head>
+    <body>
+        <h1>Marko Demo</h1>
+        Hello ${data.name}!!
+
+        <ul if(data.colors)>
+            <li style={color: color} for(color in data.colors)>${color}</li>
+        </ul>
+        <div else>
+            There are no colors!!
+        </div>
+
+        <app-hello name="Srini" />
+        <complex-data name="Complex Data" />
+
+        <lasso-body/>
+    </body>
+</html>
